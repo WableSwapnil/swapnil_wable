@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swapnil Wable, Program Leader & EdTech Innovator</title>
+  <meta name="description" content="Swapnil Wable, General Manager of Program Management at ITM Group of Institutions. Co-creator of India's Best B.Tech, MCA, MBA Applied AI, BBA. EdTech innovator. 0 to 1 builder." />
+  <meta property="og:title"       content="Swapnil Wable, Program Leader & EdTech Innovator" />
+  <meta property="og:description" content="1000+ students. 8 years. 7 programs. 3 awards. Built from the ground up." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="https://via.placeholder.com/1200x630/000000/ffffff?text=Swapnil+Wable" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three":         "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ░░░ LOADER ░░░ -->
+<div id="loader" aria-hidden="true">
+  <span class="loader-logo">SW</span>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+</div>
+
+<!-- ░░░ CURSOR ░░░ -->
+<div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ░░░ SCROLL PROGRESS ░░░ -->
+<div id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ░░░ THREE.JS CANVAS ░░░ -->
+<canvas id="threeCanvas" aria-hidden="true"></canvas>
+
+<!-- ░░░ NAV ░░░ -->
+<header id="siteHeader">
+  <nav id="siteNav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo" aria-label="Swapnil Wable, top">SW</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <a href="mailto:swapnilwable10@gmail.com" class="nav-cta" aria-label="Email Swapnil">Get in touch</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <ul role="list">
+      <li><a href="#about"          class="mobile-link">About</a></li>
+      <li><a href="#experience"     class="mobile-link">Experience</a></li>
+      <li><a href="#projects"       class="mobile-link">Projects</a></li>
+      <li><a href="#education"      class="mobile-link">Education</a></li>
+      <li><a href="#recommendations" class="mobile-link">Recommendations</a></li>
+      <li><a href="#contact"        class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-socials">
+      <a href="https://www.linkedin.com/in/swapnil-wable/"        target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/swapnil_wable"           target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/wable_swapnil"                       target="_blank" rel="noopener">X</a>
+      <a href="https://github.com/swapnilwable25"                 target="_blank" rel="noopener">GitHub</a>
+      <a href="https://swapnilwable.medium.com/"                  target="_blank" rel="noopener">Medium</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ════════════════════════════════════
+       1. HERO
+  ════════════════════════════════════ -->
+  <section id="hero" class="s-hero" aria-labelledby="heroHeading">
+
+    <!-- Gradient overlay, keeps left text legible over 3D sphere -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Ambient glow rings (CSS only) -->
+    <div class="hero-glow" aria-hidden="true">
+      <div class="hero-glow-ring hero-glow-ring--1"></div>
+      <div class="hero-glow-ring hero-glow-ring--2"></div>
+      <div class="hero-glow-ring hero-glow-ring--3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Animated status badge -->
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>Available for collaboration &nbsp;&middot;&nbsp; Navi Mumbai</span>
+        </div>
+
+        <!-- Heading, each word in overflow:hidden for slide-up effect -->
+        <h1 id="heroHeading" class="hero-heading" aria-label="Swapnil Wable">
+          <span class="hw"><span style="--d:380ms">Swapnil</span></span>
+          <span class="hw hero-h-accent"><span style="--d:500ms">&nbsp;Wable</span></span><span class="hw hero-h-period"><span style="--d:620ms">.</span></span>
+        </h1>
+
+        <!-- Role -->
+        <p class="hero-role" style="--d:740ms">
+          General Manager &middot; Program Management<br>
+          Head of Degree Programs
+        </p>
+
+        <!-- Tags row -->
+        <div class="hero-tags" style="--d:860ms">
+          <span class="hero-tag">Co-Creator of India's Best B.Tech</span>
+          <span class="hero-tag-sep" aria-hidden="true">·</span>
+          <span class="hero-tag">Co-Creator of India’s Only Skill-Based BBA <i>i</i>Connect</span>
+          <span class="hero-tag-sep" aria-hidden="true">·</span>
+          <span class="hero-tag">Co-Creator of India's AI-First MCA</span>
+          <span class="hero-tag-sep" aria-hidden="true">·</span>
+          <span class="hero-tag">Co-Creator of India's First MBA in Applied AI</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="hero-ctas" style="--d:980ms">
+          <a href="#about"   class="btn btn--primary">Explore work <span aria-hidden="true">↓</span></a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+
+        <!-- Social quick-links -->
+        <div class="hero-socials" style="--d:1100ms">
+          <a href="https://www.linkedin.com/in/swapnil-wable/"   target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/swapnilwable25"            target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://x.com/wable_swapnil"                  target="_blank" rel="noopener" aria-label="X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://swapnilwable.medium.com/"             target="_blank" rel="noopener" aria-label="Medium">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════
+       2. STATEMENT, full viewport cinematic
+  ════════════════════════════════════ -->
+  <section id="statement" class="s-statement" aria-label="Impact statement">
+    <div class="statement-inner">
+      <p class="statement-eyebrow" data-anim="fade-up">Impact in numbers.</p>
+      <h2 class="statement-heading" data-anim="chars">
+        <span class="sh-word">1000+</span>
+        <span class="sh-word sh-dim">student careers</span>
+        <span class="sh-word">shaped.</span>
+      </h2>
+      <p class="statement-sub" data-anim="fade-up" data-delay="400">
+        From a blank whiteboard to a full-fledged degree ecosystem —<br>
+        built, scaled, and sustained over 8 years of relentless execution.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       3. ABOUT
+  ════════════════════════════════════ -->
+  <section id="about" class="s-about s-light" aria-labelledby="aboutHeading">
+    <div class="container">
+      <span class="section-eyebrow" data-anim="fade-up">About</span>
+      <h2 id="aboutHeading" class="section-heading" data-anim="fade-up" data-delay="100">
+        Not just an educator.<br><em>An architect</em> of what<br>education can become.
+      </h2>
+
+      <div class="about-body">
+        <div class="about-text" data-anim="fade-up" data-delay="200">
+          <p>I'm Swapnil Wable, a program architect, institutional leader, and lifelong builder at the intersection of EdTech and operational excellence.</p>
+          <p>At ITM Group, I oversee the full lifecycle of degree programs, from curriculum design and faculty development to admissions strategy and student success. I treat every program like a startup: product-led, outcome-obsessed, and student-first.</p>
+          <p>My career began with a choice not to chase what was comfortable, and everything since has been about building what didn't exist yet.</p>
+          <a href="https://www.linkedin.com/in/swapnil-wable/" target="_blank" rel="noopener noreferrer" class="link-arrow">
+            View LinkedIn profile <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <dl class="about-stats" aria-label="Key achievements">
+          <div class="stat-card stat-card--blue" data-anim="fade-up" data-delay="100">
+            <dd class="stat-num" data-count="1000">1000<span class="stat-sup">+</span></dd>
+            <dt class="stat-lbl">Students shaped</dt>
+          </div>
+          <div class="stat-card stat-card--cyan" data-anim="fade-up" data-delay="200">
+            <dd class="stat-num" data-count="8">8</dd>
+            <dt class="stat-lbl">Years of impact</dt>
+          </div>
+          <div class="stat-card stat-card--purple" data-anim="fade-up" data-delay="300">
+            <dd class="stat-num" data-count="7">7</dd>
+            <dt class="stat-lbl">Programs launched</dt>
+          </div>
+          <div class="stat-card stat-card--gold" data-anim="fade-up" data-delay="400">
+            <dd class="stat-num" data-count="3">3</dd>
+            <dt class="stat-lbl">Awards earned</dt>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Skills chips -->
+      <div class="skills-row" data-anim="fade-up" data-delay="300">
+        <span class="chip">Entrepreneurial Mindset</span>
+        <span class="chip">Strategic Planning</span>
+        <span class="chip">Program Management</span>
+        <span class="chip">Curriculum Design</span>
+        <span class="chip">Operational Excellence</span>
+        <span class="chip">Full-Stack Development</span>
+        <span class="chip">Data Science</span>
+        <span class="chip">Marketing Strategy</span>
+        <span class="chip">0 to 1 Builder</span>
+        <span class="chip">Admissions Strategy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       4. EXPERIENCE
+  ════════════════════════════════════ -->
+  <section id="experience" class="s-experience" aria-labelledby="expHeading">
+    <div class="container">
+      <span class="section-eyebrow section-eyebrow--light" data-anim="fade-up">Experience</span>
+      <h2 id="expHeading" class="section-heading section-heading--light" data-anim="fade-up" data-delay="100">
+        Every role.<br><em>A new frontier.</em>
+      </h2>
+
+      <ol class="exp-list" reversed>
+
+        <li class="exp-item" data-anim="exp-reveal">
+          <article>
+            <div class="exp-top">
+              <div class="exp-left">
+                <h3 class="exp-company">ITM Group of Institutions</h3>
+                <span class="exp-badge exp-badge--current">Current</span>
+              </div>
+              <div class="exp-right">
+                <span class="exp-role">General Manager, Program Management</span>
+                <time class="exp-time">Jul 2025 – Present · Navi Mumbai</time>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Driving institutional program strategy across multiple degree offerings. Architecting the full academic ecosystem, admissions funnel, curriculum, faculty development, and student success metrics, for sustained enrollment growth and quality outcomes.
+            </p>
+            <p class="exp-sub">
+              Previously: <strong>Head of CSE Department</strong> (Nov 2022 – Jul 2025), Scaled the B.Tech CSE program from 0 to 1000+ enrolled students, establishing the department as a benchmark for innovation-led education.
+            </p>
+            <ul class="exp-awards">
+              <li>🏆 Sarathi Award for Best Performance</li>
+              <li>🏆 Admission Record Breaker of the Year, B.Tech &amp; BBA</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="exp-item" data-anim="exp-reveal">
+          <article>
+            <div class="exp-top">
+              <div class="exp-left">
+                <h3 class="exp-company">WhiteHat Jr</h3>
+              </div>
+              <div class="exp-right">
+                <span class="exp-role">Associate Curriculum Designer</span>
+                <time class="exp-time">Jun 2021 – Oct 2022 · Mumbai</time>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Designed and iterated K–12 coding curriculum at one of India's fastest-growing EdTech platforms. Worked cross-functionally with instructional designers, product, and engineering to ship learning experiences used by hundreds of thousands of students.
+            </p>
+            <ul class="exp-awards">
+              <li>⭐ Stellar Award, Best Performance</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="exp-item" data-anim="exp-reveal">
+          <article>
+            <div class="exp-top">
+              <div class="exp-left">
+                <h3 class="exp-company">Tata Communications</h3>
+              </div>
+              <div class="exp-right">
+                <span class="exp-role">Project Trainee, Network Validation</span>
+                <time class="exp-time">Jun 2019 – Mar 2020 · Pune</time>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Conducted network infrastructure validation and performance analysis for global enterprise telecom systems. Built strong foundations in networking protocols, enterprise architecture, and structured project delivery.
+            </p>
+          </article>
+        </li>
+
+        <li class="exp-item" data-anim="exp-reveal">
+          <article>
+            <div class="exp-top">
+              <div class="exp-left">
+                <h3 class="exp-company">Agri Search India</h3>
+              </div>
+              <div class="exp-right">
+                <span class="exp-role">Associate Software Engineer</span>
+                <time class="exp-time">Nov 2017 – Apr 2018 · Nashik</time>
+              </div>
+            </div>
+            <p class="exp-desc">
+              Developed the Sales Target Tracker Android application, a real-time KPI dashboard used by the field sales team. First industry role; formative experience in agile development, client feedback loops, and shipping production software.
+            </p>
+          </article>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       5. PROJECTS
+  ════════════════════════════════════ -->
+  <section id="projects" class="s-projects s-light" aria-labelledby="projHeading">
+    <div class="container">
+      <span class="section-eyebrow" data-anim="fade-up">Projects</span>
+      <h2 id="projHeading" class="section-heading" data-anim="fade-up" data-delay="100">
+        Built from zero.<br><em>Scaled to real.</em>
+      </h2>
+    </div>
+
+    <!-- Project stack, each uses same featured card structure -->
+    <div class="proj-stack">
+
+      <!-- ── 01: B.Tech CSE Program ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="0">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">
+            <span class="proj-active-badge">● Active</span>&ensp;Flagship &middot; 2022–Present
+          </div>
+          <h3 class="proj-featured-title">B.Tech CSE Program</h3>
+          <p class="proj-featured-desc">
+            Built ITM's Computer Science &amp; Engineering undergraduate program entirely from scratch.
+            Full ownership: curriculum architecture, faculty onboarding, accreditation, branding, hackathons,
+            placement infrastructure, and student mentorship, co-creating what was recognised
+            as India's Best B.Tech.
+          </p>
+          <ul class="proj-tags">
+            <li>Program Architecture</li><li>Curriculum Design</li><li>Accreditation</li>
+            <li>Sales &amp; Admissions</li><li>Mentorship</li><li>Team Leadership</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">4</span>
+              <span class="proj-stat-lbl">Years</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">2</span>
+              <span class="proj-stat-lbl">Awards</span>
+            </div>
+            <div class="proj-stat proj-stat--sm">
+              <span class="proj-stat-num">India's Best</span>
+              <span class="proj-stat-lbl">B.Tech</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- Code editor terminal, B.Tech program in code -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="windowClip">
+                <rect x="18" y="8" width="444" height="304" rx="12"/>
+              </clipPath>
+              <linearGradient id="glassGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+                <stop offset="40%" stop-color="rgba(255,255,255,0)"/>
+                <stop offset="50%" stop-color="rgba(255,255,255,0.04)"/>
+                <stop offset="60%" stop-color="rgba(255,255,255,0)"/>
+                <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Window frame -->
+            <rect x="18" y="8" width="444" height="304" rx="12"
+                  fill="rgba(12,12,14,0.95)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+            <!-- Title bar -->
+            <rect x="18" y="8" width="444" height="38" rx="12" fill="rgba(255,255,255,0.04)"/>
+            <rect x="18" y="36" width="444" height="2" fill="rgba(255,255,255,0.06)"/>
+            <!-- Traffic lights -->
+            <circle cx="42" cy="27" r="5.5" fill="rgba(255,95,87,0.6)"/>
+            <circle cx="60" cy="27" r="5.5" fill="rgba(255,189,46,0.6)"/>
+            <circle cx="78" cy="27" r="5.5" fill="rgba(39,201,63,0.6)"/>
+            <!-- Active tab -->
+            <rect x="108" y="14" width="136" height="26" rx="6"
+                  fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+            <text x="176" y="31" font-family="'Courier New',monospace" font-size="10"
+                  fill="rgba(255,255,255,0.45)" text-anchor="middle">curriculum.py</text>
+            <!-- Line number gutter -->
+            <rect x="18" y="46" width="38" height="224" fill="rgba(255,255,255,0.015)"/>
+            <line x1="56" y1="46" x2="56" y2="270" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+            <!-- ── Code lines ── -->
+            <!-- Line 1: class ProgramManager: -->
+            <text x="32" y="66" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">1</text>
+            <text x="64" y="66" font-family="'Courier New',monospace" font-size="11" fill="rgba(200,130,255,0.85)">class </text>
+            <text x="101" y="66" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,210,255,0.85)">ProgramManager</text>
+            <text x="252" y="66" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.5)">:</text>
+            <!-- Line 2: def __init__ -->
+            <text x="32" y="84" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">2</text>
+            <text x="72" y="84" font-family="'Courier New',monospace" font-size="11" fill="rgba(200,130,255,0.75)">def </text>
+            <text x="98" y="84" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,225,140,0.8)">__init__</text>
+            <text x="162" y="84" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.4)">(self):</text>
+            <!-- Line 3: self.years -->
+            <text x="32" y="102" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">3</text>
+            <text x="80" y="102" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.45)">self.</text>
+            <text x="113" y="102" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,210,255,0.75)">years</text>
+            <text x="150" y="102" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.35)"> = </text>
+            <text x="172" y="102" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,185,55,0.85)">8</text>
+            <!-- Line 4: self.programs -->
+            <text x="32" y="120" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">4</text>
+            <text x="80" y="120" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.45)">self.</text>
+            <text x="113" y="120" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,210,255,0.75)">programs</text>
+            <text x="178" y="120" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.35)"> = </text>
+            <text x="200" y="120" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,185,55,0.85)">7</text>
+            <!-- Line 5: self.awards -->
+            <text x="32" y="138" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">5</text>
+            <text x="80" y="138" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.45)">self.</text>
+            <text x="113" y="138" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,210,255,0.75)">awards</text>
+            <text x="165" y="138" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.35)"> = </text>
+            <text x="187" y="138" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,185,55,0.85)">3</text>
+            <!-- Line 6: blank -->
+            <text x="32" y="156" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">6</text>
+            <!-- Line 7: def build_program -->
+            <text x="32" y="174" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">7</text>
+            <text x="72" y="174" font-family="'Courier New',monospace" font-size="11" fill="rgba(200,130,255,0.75)">def </text>
+            <text x="98" y="174" font-family="'Courier New',monospace" font-size="11" fill="rgba(100,225,140,0.8)">build_program</text>
+            <text x="204" y="174" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.4)">(self):</text>
+            <!-- Line 8: return best_btech -->
+            <rect x="58" y="180" width="384" height="16" rx="4" fill="rgba(0,113,227,0.06)" class="active-line-bg" pointer-events="none"/>
+            <text x="32" y="192" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">8</text>
+            <text x="80" y="192" font-family="'Courier New',monospace" font-size="11" fill="rgba(200,130,255,0.75)">return </text>
+            <text x="123" y="192" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,210,80,0.85)">"India's Best B.Tech"</text>
+            <!-- Line 9: comment -->
+            <text x="32" y="210" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">9</text>
+            <text x="64" y="210" font-family="'Courier New',monospace" font-size="11" fill="rgba(255,255,255,0.22)"># 0 → 1: built entire CSE dept from scratch</text>
+            <!-- Line 10: cursor -->
+            <text x="32" y="228" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)">10</text>
+            <rect x="64" y="217" width="7" height="14" rx="1" fill="rgba(255,255,255,0.65)">
+              <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Divider -->
+            <line x1="18" y1="244" x2="462" y2="244"
+                  stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+            <!-- Terminal section -->
+            <rect x="18" y="244" width="444" height="68" fill="rgba(0,0,0,0.25)"
+                  rx="0"/>
+            <text x="30" y="260" font-family="'Courier New',monospace" font-size="9"
+                  fill="rgba(255,255,255,0.22)" letter-spacing="0.08em">TERMINAL</text>
+            <!-- Terminal line 1 -->
+            <text x="30" y="276" font-family="'Courier New',monospace" font-size="11"
+                  fill="rgba(100,225,140,0.75)">$</text>
+            <text x="42" y="276" font-family="'Courier New',monospace" font-size="11"
+                  fill="rgba(255,255,255,0.40)"> python curriculum.py</text>
+            <!-- Terminal output -->
+            <text x="30" y="294" font-family="'Courier New',monospace" font-size="11"
+                  fill="rgba(100,225,140,0.85)" class="terminal-check">✓</text>
+            <text x="46" y="294" font-family="'Courier New',monospace" font-size="11"
+                  fill="rgba(255,255,255,0.45)"> Programs: 7  ·  Awards: 3  ·  Status: <tspan fill="rgba(100,225,140,0.95)" class="terminal-active-text">Active</tspan></text>
+            <!-- Bottom rounded corners -->
+            <rect x="18" y="300" width="444" height="12" rx="6"
+                  fill="rgba(0,0,0,0.25)"/>
+
+            <!-- Diagonal Glass Sweep Reflection Overlay -->
+            <g clip-path="url(#windowClip)">
+              <rect x="-100" y="-300" width="220" height="800" fill="url(#glassGlow)" transform="rotate(25)" class="reflection-bar" pointer-events="none"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── 02: MCA Program ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="80">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">
+            <span class="proj-active-badge">● Active</span>&ensp;Graduate Program &middot; 2026–Present
+          </div>
+          <h3 class="proj-featured-title">MCA Program</h3>
+          <p class="proj-featured-desc">
+            Architecting ITM's Master of Computer Applications entirely from the ground up.
+            Leading curriculum alignment with industry needs, navigating regulatory approvals,
+            building the faculty pipeline, designing the student experience, and driving
+            go-to-market, targeting a strong 2026 launch cohort.
+          </p>
+          <ul class="proj-tags">
+            <li>Graduate Program Design</li><li>Regulatory Compliance</li>
+            <li>Curriculum Architecture</li><li>Faculty Hiring</li><li>Stakeholder Management</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">2026</span>
+              <span class="proj-stat-lbl">Launch Year</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">0→1</span>
+              <span class="proj-stat-lbl">Builder</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">PG</span>
+              <span class="proj-stat-lbl">Level</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- Cloud deployment / modular system architecture map -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Card background -->
+            <rect x="18" y="8" width="444" height="304" rx="16" fill="rgba(10,10,12,0.95)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <defs>
+              <!-- Glowing gradients -->
+              <radialGradient id="mcaGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(0,113,227,0.18)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00c6ff"/>
+                <stop offset="100%" stop-color="#0072ff"/>
+              </linearGradient>
+            </defs>
+            
+            <!-- Glow background -->
+            <circle cx="240" cy="160" r="120" fill="url(#mcaGlow)"/>
+
+            <!-- High-tech circuit paths -->
+            <!-- Top Left to Center -->
+            <path d="M70,80 L180,80 L220,130" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M70,80 L180,80 L220,130" stroke="url(#blueGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="15 120">
+              <animate attributeName="stroke-dashoffset" values="135;0" dur="2.5s" repeatCount="indefinite" />
+            </path>
+
+            <!-- Top Right to Center -->
+            <path d="M410,80 L300,80 L260,130" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M410,80 L300,80 L260,130" stroke="url(#blueGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="15 120">
+              <animate attributeName="stroke-dashoffset" values="0;135" dur="2.5s" repeatCount="indefinite" />
+            </path>
+
+            <!-- Bottom Left to Center -->
+            <path d="M70,240 L180,240 L220,190" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M70,240 L180,240 L220,190" stroke="url(#blueGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="15 120">
+              <animate attributeName="stroke-dashoffset" values="135;0" dur="2.8s" repeatCount="indefinite" />
+            </path>
+
+            <!-- Bottom Right to Center -->
+            <path d="M410,240 L300,240 L260,190" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M410,240 L300,240 L260,190" stroke="url(#blueGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="15 120">
+              <animate attributeName="stroke-dashoffset" values="0;135" dur="2.8s" repeatCount="indefinite" />
+            </path>
+
+            <!-- Central Hub / Core -->
+            <rect x="210" y="130" width="60" height="60" rx="14" fill="rgba(0,113,227,0.15)" stroke="url(#blueGrad)" stroke-width="1.5"/>
+            <rect x="218" y="138" width="44" height="44" rx="10" fill="rgba(10,10,12,0.85)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <text x="240" y="165" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle">MCA</text>
+            
+            <!-- Outer glowing ring around Core -->
+            <rect x="204" y="124" width="72" height="72" rx="18" stroke="rgba(0,113,227,0.3)" stroke-width="1" stroke-dasharray="4 8">
+              <animateTransform attributeName="transform" type="rotate" from="0 240 160" to="360 240 160" dur="15s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Satellite Nodes -->
+            <!-- 1. Core CS -->
+            <g class="sat-node">
+              <circle cx="70" cy="80" r="18" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              <circle cx="70" cy="80" r="4" fill="url(#blueGrad)"/>
+              <text x="70" y="114" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(245,245,247,0.7)" text-anchor="middle">Core CS</text>
+            </g>
+
+            <!-- 2. AI/ML Integration -->
+            <g class="sat-node">
+              <circle cx="410" cy="80" r="18" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              <circle cx="410" cy="80" r="4" fill="url(#blueGrad)"/>
+              <text x="410" y="114" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(245,245,247,0.7)" text-anchor="middle">AI &amp; Data</text>
+            </g>
+
+            <!-- 3. Cloud Systems -->
+            <g class="sat-node">
+              <circle cx="70" cy="240" r="18" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              <circle cx="70" cy="240" r="4" fill="url(#blueGrad)"/>
+              <text x="70" y="274" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(245,245,247,0.7)" text-anchor="middle">Cloud Arch</text>
+            </g>
+
+            <!-- 4. Industry Connect -->
+            <g class="sat-node">
+              <circle cx="410" cy="240" r="18" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              <circle cx="410" cy="240" r="4" fill="url(#blueGrad)"/>
+              <text x="410" y="274" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(245,245,247,0.7)" text-anchor="middle">Industry</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── 03: MBA in Applied AI ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="160">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">
+            <span class="proj-active-badge">● Active</span>&ensp;Post-Graduate Program &middot; 2026–Present
+          </div>
+          <h3 class="proj-featured-title">MBA in Applied AI</h3>
+          <p class="proj-featured-desc">
+            Designing a future-ready management program that integrates AI tools, business frameworks,
+            and real-world industry use cases. Leading end-to-end: curriculum architecture, faculty
+            acquisition, accreditation pathway, brand identity, website, and go-to-market launch strategy.
+            Bridging business leadership with the intelligence revolution.
+          </p>
+          <ul class="proj-tags">
+            <li>AI in Business</li><li>Program Design</li><li>Branding</li>
+            <li>Marketing Strategy</li><li>Faculty Development</li><li>Accreditation</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">2026</span>
+              <span class="proj-stat-lbl">Launch Year</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">AI</span>
+              <span class="proj-stat-lbl">Powered</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">MBA</span>
+              <span class="proj-stat-lbl">Level</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- AI cognitive decision engine / business forecasting matrix -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Card background -->
+            <rect x="18" y="8" width="444" height="304" rx="16" fill="rgba(10,10,12,0.95)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <defs>
+              <!-- Glowing gradients -->
+              <radialGradient id="aiGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(168,85,247,0.18)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f472b6"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Glow background -->
+            <circle cx="240" cy="160" r="130" fill="url(#aiGlow)"/>
+
+            <!-- High-tech grids -->
+            <!-- Left Input Dashboard panel -->
+            <rect x="42" y="60" width="100" height="200" rx="8" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="92" y="80" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">BUSINESS DATA</text>
+            <!-- Mini graphs/lines inside left panel -->
+            <path d="M54,115 L74,105 L94,120 L114,100 L130,110" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M54,155 L74,165 L94,145 L114,170 L130,150" stroke="url(#purpleGrad)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+            <rect x="54" y="200" width="76" height="8" rx="4" fill="rgba(255,255,255,0.06)"/>
+            <rect x="54" y="216" width="56" height="8" rx="4" fill="rgba(255,255,255,0.04)"/>
+            <rect x="54" y="232" width="66" height="8" rx="4" fill="rgba(255,255,255,0.05)"/>
+
+            <!-- Right Strategic Output panel -->
+            <rect x="338" y="60" width="100" height="200" rx="8" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="388" y="80" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">STRATEGY DECISION</text>
+            <!-- Growth chart inside right panel -->
+            <path d="M350,220 L370,195 L390,205 L410,160 L426,110" stroke="url(#purpleGrad)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M350,220 L370,195 L390,205 L410,160 L426,110" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 80">
+              <animate attributeName="stroke-dashoffset" values="90;0" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <circle cx="426" cy="110" r="4" fill="#f472b6">
+              <animate attributeName="r" values="3;5;3" dur="1.2s" repeatCount="indefinite" />
+            </circle>
+            <text x="388" y="245" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)" text-anchor="middle">MBA AI</text>
+
+            <!-- Central Neural/AI Cognitive Matrix Core -->
+            <g class="neural-cluster">
+              <!-- Links -->
+              <line x1="240" y1="100" x2="190" y2="150" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line x1="240" y1="100" x2="290" y2="150" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line x1="190" y1="150" x2="240" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line x1="290" y1="150" x2="240" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <line x1="190" y1="150" x2="290" y2="150" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <line x1="240" y1="100" x2="240" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+              <!-- Data streams feeding into cognitive cluster -->
+              <path d="M142,120 L190,150" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M142,160 L190,150" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M290,150 L338,160" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M290,150 L338,205" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+              <!-- Core Nodes -->
+              <circle cx="240" cy="100" r="7" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              <circle cx="240" cy="100" r="2.5" fill="#f472b6"/>
+              
+              <circle cx="190" cy="150" r="7" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              <circle cx="190" cy="150" r="2.5" fill="#a855f7"/>
+
+              <circle cx="290" cy="150" r="7" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              <circle cx="290" cy="150" r="2.5" fill="#a855f7"/>
+
+              <circle cx="240" cy="200" r="7" fill="rgba(20,20,24,0.9)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+              <circle cx="240" cy="200" r="2.5" fill="#f472b6"/>
+
+              <!-- Central Floating Brain Node -->
+              <circle cx="240" cy="150" r="16" fill="rgba(168,85,247,0.15)" stroke="url(#purpleGrad)" stroke-width="1.5">
+                <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Embedded AI status -->
+              <text x="240" y="153" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle">AI</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── 04: BBA iConnect ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="240">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">
+            <span class="proj-active-badge">● Active</span>&ensp;Undergraduate Program &middot; 2024–Present
+          </div>
+          <h3 class="proj-featured-title">BBA iConnect</h3>
+          <p class="proj-featured-desc">
+            Scaled ITM's BBA program from a nascent offering to 260+ enrolled students through
+            a CRM-led admissions overhaul, data-driven marketing campaigns, and end-to-end sales
+            funnel management. Architected the curriculum integration with industry mentorship,
+            built the student engagement loop, and drove brand positioning in a competitive market.
+          </p>
+          <ul class="proj-tags">
+            <li>Sales Strategy</li><li>CRM Automation</li><li>Digital Marketing</li>
+            <li>Admissions Operations</li><li>Program Design</li><li>Brand Positioning</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">260<sup>+</sup></span>
+              <span class="proj-stat-lbl">Students</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">2</span>
+              <span class="proj-stat-lbl">Years</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">CRM</span>
+              <span class="proj-stat-lbl">Led Growth</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- CRM & Enrollment Conversion Funnel + Exponential Growth Dashboard -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Window frame -->
+            <rect x="18" y="8" width="444" height="304" rx="12"
+                  fill="rgba(12,12,14,0.95)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+            <!-- Title bar -->
+            <rect x="18" y="8" width="444" height="38" rx="12" fill="rgba(255,255,255,0.04)"/>
+            <rect x="18" y="36" width="444" height="2" fill="rgba(255,255,255,0.06)"/>
+            <!-- Traffic lights -->
+            <circle cx="42" cy="27" r="5.5" fill="rgba(255,95,87,0.6)"/>
+            <circle cx="60" cy="27" r="5.5" fill="rgba(255,189,46,0.6)"/>
+            <circle cx="78" cy="27" r="5.5" fill="rgba(39,201,63,0.6)"/>
+            <!-- Active tab -->
+            <rect x="108" y="14" width="136" height="26" rx="6"
+                  fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+            <text x="176" y="31" font-family="'Courier New',monospace" font-size="10"
+                  fill="rgba(255,255,255,0.45)" text-anchor="middle">crm_funnel.svg</text>
+
+            <defs>
+              <!-- Glowing gradients -->
+              <radialGradient id="bbaGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(16,185,129,0.12)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#34d399"/>
+                <stop offset="100%" stop-color="#059669"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Glow background -->
+            <circle cx="240" cy="160" r="130" fill="url(#bbaGlow)"/>
+
+            <!-- Left: Enrollment Conversion Funnel -->
+            <g class="funnel-group">
+              <text x="96" y="65" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">ENROLLMENT FUNNEL</text>
+              
+              <!-- Step 1: Leads -->
+              <polygon points="42,80 150,80 138,112 54,112" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+              <text x="96" y="99" font-family="Inter,sans-serif" font-size="9" font-weight="500" fill="rgba(255,255,255,0.6)" text-anchor="middle">CRM Leads (1000+)</text>
+              
+              <!-- Connecting Arrow -->
+              <path d="M96,115 L96,122" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"/>
+
+              <!-- Step 2: Applications -->
+              <polygon points="56,126 136,126 126,158 66,158" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <text x="96" y="145" font-family="Inter,sans-serif" font-size="9" font-weight="500" fill="rgba(255,255,255,0.7)" text-anchor="middle">Applications</text>
+
+              <!-- Connecting Arrow -->
+              <path d="M96,161 L96,168" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"/>
+
+              <!-- Step 3: Enrolled -->
+              <polygon points="68,172 124,172 116,204 76,204" fill="rgba(16,185,129,0.12)" stroke="url(#greenGrad)" stroke-width="1.5"/>
+              <text x="96" y="191" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle">260+ Enrolled</text>
+            </g>
+
+            <!-- Right: Cohort Growth Dashboard Panel -->
+            <g class="growth-panel">
+              <!-- Panel Box -->
+              <rect x="194" y="60" width="244" height="220" rx="8" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <text x="316" y="80" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">GROWTH VELOCITY</text>
+
+              <!-- Grid lines -->
+              <line x1="214" y1="120" x2="418" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="214" y1="160" x2="418" y2="160" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="214" y1="200" x2="418" y2="200" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+              <!-- Sparkline / Growth Curve -->
+              <path d="M214,210 Q264,195 314,160 T414,105" stroke="url(#greenGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M214,210 Q264,195 314,160 T414,105" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 90" fill="none">
+                <animate attributeName="stroke-dashoffset" values="102;0" dur="2.2s" repeatCount="indefinite"/>
+              </path>
+
+              <!-- Checkpoints -->
+              <circle cx="214" cy="210" r="3.5" fill="rgba(255,255,255,0.3)"/>
+              <circle cx="314" cy="160" r="3.5" fill="rgba(255,255,255,0.4)"/>
+              <circle cx="414" cy="105" r="5" fill="#34d399">
+                <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- Cohort scale labels -->
+              <text x="214" y="228" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.22)" text-anchor="middle">2024</text>
+              <text x="314" y="178" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,0.22)" text-anchor="middle">Cohort II</text>
+              <text x="414" y="124" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.55)" text-anchor="middle">260+</text>
+
+              <!-- Performance Indicator -->
+              <rect x="214" y="248" width="204" height="1" fill="rgba(255,255,255,0.06)"/>
+              <text x="316" y="266" font-family="Inter,sans-serif" font-size="8.5" font-weight="600" fill="#34d399" text-anchor="middle">▲ 4.3X SCALING OVER 2 YRS</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── 05: Sales Target Tracker ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="320">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">Completed &middot; Android &middot; 2017–2018</div>
+          <h3 class="proj-featured-title">Sales Target Tracker</h3>
+          <p class="proj-featured-desc">
+            Designed and built an Android application for real-time sales performance dashboards
+            at Agri Search India. Features live KPI tracking, team leaderboards, target recalibration
+            engine, and full offline mode, enabling data-driven field sales decisions with or without
+            connectivity. First production app shipped end-to-end.
+          </p>
+          <ul class="proj-tags">
+            <li>Android / Java</li><li>Firebase Realtime DB</li><li>Dashboard UX</li>
+            <li>Offline Mode</li><li>KPI Tracking</li><li>Agri-Tech</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">RT</span>
+              <span class="proj-stat-lbl">Real-time</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">📶</span>
+              <span class="proj-stat-lbl">Offline Mode</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">1<sup>st</sup></span>
+              <span class="proj-stat-lbl">Prod App</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- Sleek Smartphone with high-fidelity live tracking dashboard -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Orange / Gold ambient glow -->
+              <radialGradient id="salesGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(249,115,22,0.12)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <!-- Amber orange gradient -->
+              <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fb923c"/>
+                <stop offset="100%" stop-color="#f97316"/>
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </linearGradient>
+              <!-- Rounded clip for the screen contents -->
+              <clipPath id="screenClip">
+                <rect x="156" y="21" width="168" height="278" rx="21" />
+              </clipPath>
+            </defs>
+
+            <!-- Ambient Glow -->
+            <circle cx="240" cy="160" r="140" fill="url(#salesGlow)"/>
+
+            <!-- Left and Right Floating Status Panels (adding depth) -->
+            <!-- Left panel: Live metrics summary -->
+            <rect x="30" y="70" width="104" height="74" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="82" y="88" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">TOTAL PIPELINE</text>
+            <text x="82" y="108" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="url(#orangeGrad)" text-anchor="middle">₹1.2Cr</text>
+            <text x="82" y="124" font-family="Inter,sans-serif" font-size="7.5" font-weight="500" fill="#34d399" text-anchor="middle">▲ 24% THIS MON</text>
+
+            <!-- Right panel: Leaderboard summary -->
+            <rect x="346" y="160" width="104" height="74" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="398" y="178" font-family="Inter,sans-serif" font-size="8" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.08em">TEAM RANKING</text>
+            <text x="398" y="198" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle">#1 Dept</text>
+            <text x="398" y="214" font-family="Inter,sans-serif" font-size="7.5" font-weight="500" fill="#f59e0b" text-anchor="middle">🏆 STELLAR PERF</text>
+
+            <!-- Sleek Phone Chassis -->
+            <rect x="150" y="15" width="180" height="290" rx="26" fill="rgba(10,10,12,0.95)" stroke="rgba(255,255,255,0.15)" stroke-width="2.5"/>
+            <!-- Inner bezel border -->
+            <rect x="155" y="20" width="170" height="280" rx="22" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
+
+            <!-- Phone Screen Area -->
+            <g clip-path="url(#screenClip)">
+              <!-- Header inside screen -->
+              <text x="240" y="58" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="0.1em">AGRI SEARCH</text>
+              <line x1="170" y1="66" x2="310" y2="66" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+              <!-- Target Progress Radial Ring -->
+              <circle cx="240" cy="115" r="28" stroke="rgba(255,255,255,0.04)" stroke-width="4.5" fill="none"/>
+              <!-- Glow ring behind active progress -->
+              <circle cx="240" cy="115" r="28" stroke="url(#orangeGrad)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="176" stroke-dashoffset="28" fill="none" opacity="0.3"/>
+              <circle cx="240" cy="115" r="28" stroke="url(#orangeGrad)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="176" stroke-dashoffset="28" fill="none">
+                <animate attributeName="stroke-dashoffset" values="176;28" dur="1.8s" fill="freeze" />
+              </circle>
+              <text x="240" y="119" font-family="Inter,sans-serif" font-size="12" font-weight="800" fill="rgba(255,255,255,0.95)" text-anchor="middle">84%</text>
+              <text x="240" y="152" font-family="Inter,sans-serif" font-size="7" font-weight="600" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="0.05em">TARGET RECALIBRATED</text>
+
+              <!-- Sales Spline Trend Chart -->
+              <rect x="166" y="162" width="148" height="52" rx="6" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <!-- Chart Spline Curve -->
+              <path d="M172,204 Q192,198 202,184 T232,188 T262,174 T292,182 T308,172" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <!-- Sparkline active animated node -->
+              <circle cx="308" cy="172" r="3" fill="#f59e0b">
+                <animate attributeName="r" values="2;4;2" dur="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Chart label -->
+              <text x="174" y="174" font-family="Inter,sans-serif" font-size="6.5" font-weight="600" fill="rgba(255,255,255,0.22)">REALTIME TREND</text>
+
+              <!-- Leaderboards / Feed Widget -->
+              <g class="feed-widget">
+                <!-- User row 1 -->
+                <rect x="166" y="222" width="148" height="22" rx="4" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+                <circle cx="178" cy="233" r="5" fill="rgba(255,255,255,0.08)"/>
+                <text x="190" y="236" font-family="Inter,sans-serif" font-size="7" font-weight="600" fill="rgba(255,255,255,0.7)">Pune Region</text>
+                <text x="306" y="236" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#fb923c" text-anchor="end">104%</text>
+
+                <!-- User row 2 -->
+                <rect x="166" y="248" width="148" height="22" rx="4" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.04)" stroke-width="0.75"/>
+                <circle cx="178" cy="259" r="5" fill="rgba(255,255,255,0.08)"/>
+                <text x="190" y="262" font-family="Inter,sans-serif" font-size="7" font-weight="600" fill="rgba(255,255,255,0.7)">Mumbai North</text>
+                <text x="306" y="262" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="end">92%</text>
+              </g>
+
+              <!-- Sync footer panel -->
+              <rect x="155" y="278" width="170" height="22" fill="rgba(0,0,0,0.3)"/>
+              <text x="240" y="291" font-family="Inter,sans-serif" font-size="6.5" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="0.08em">● SYNCED · OFFLINE MODE READY</text>
+            </g>
+
+            <!-- Dynamic Island Notch placed above screen layer -->
+            <rect x="205" y="25" width="70" height="13" rx="6.5" fill="rgba(0,0,0,0.9)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+            <!-- Notch camera dot -->
+            <circle cx="213" cy="31.5" r="2.5" fill="rgba(255,255,255,0.1)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── 06: Fake Note Detection ── -->
+      <div class="proj-featured" data-anim="fade-up" data-delay="400">
+        <div class="proj-featured-inner">
+          <div class="proj-featured-label">Completed &middot; Computer Vision &middot; 2016–2017</div>
+          <h3 class="proj-featured-title">Fake Note Detection</h3>
+          <p class="proj-featured-desc">
+            A computer vision system that identifies counterfeit currency notes in real-time using
+            OpenCV image processing pipelines combined with machine learning classification models.
+            Extracts security features, watermarks, microprinting, magnetic ink, and cross-validates
+            against authentic note signatures to deliver high-accuracy verdicts instantly.
+          </p>
+          <ul class="proj-tags">
+            <li>Python</li><li>OpenCV</li><li>Machine Learning</li>
+            <li>Image Processing</li><li>Computer Vision</li><li>Security Systems</li>
+          </ul>
+          <div class="proj-stat-bar">
+            <div class="proj-stat">
+              <span class="proj-stat-num">CV</span>
+              <span class="proj-stat-lbl">OpenCV</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">ML</span>
+              <span class="proj-stat-lbl">Classifier</span>
+            </div>
+            <div class="proj-stat">
+              <span class="proj-stat-num">RT</span>
+              <span class="proj-stat-lbl">Real-time</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-featured-visual" aria-hidden="true">
+          <!-- Holographic Banknote scanner & Computer Vision diagnostics dashboard -->
+          <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Ambient mint green glow -->
+              <radialGradient id="scannerGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(16,185,129,0.12)" />
+                <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+              </radialGradient>
+              <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#34d399"/>
+                <stop offset="100%" stop-color="#059669"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Ambient Glow -->
+            <circle cx="240" cy="160" r="140" fill="url(#scannerGlow)"/>
+
+            <!-- Window frame wrapper matching Apple aesthetic -->
+            <rect x="18" y="8" width="444" height="304" rx="12"
+                  fill="rgba(12,12,14,0.95)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+            <!-- Title bar -->
+            <rect x="18" y="8" width="444" height="38" rx="12" fill="rgba(255,255,255,0.04)"/>
+            <rect x="18" y="36" width="444" height="2" fill="rgba(255,255,255,0.06)"/>
+            <!-- Traffic lights -->
+            <circle cx="42" cy="27" r="5.5" fill="rgba(255,95,87,0.6)"/>
+            <circle cx="60" cy="27" r="5.5" fill="rgba(255,189,46,0.6)"/>
+            <circle cx="78" cy="27" r="5.5" fill="rgba(39,201,63,0.6)"/>
+            <!-- Active tab -->
+            <rect x="108" y="14" width="136" height="26" rx="6"
+                  fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+            <text x="176" y="31" font-family="'Courier New',monospace" font-size="10"
+                  fill="rgba(255,255,255,0.45)" text-anchor="middle">opencv_scanner.py</text>
+
+            <!-- Computer Vision Active Viewport -->
+            <rect x="36" y="60" width="408" height="234" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+            <!-- Corner crosshairs for CV viewport -->
+            <path d="M50 82 L50 72 L60 72" stroke="rgba(52,211,153,0.6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M430 82 L430 72 L420 72" stroke="rgba(52,211,153,0.6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M50 248 L50 258 L60 258" stroke="rgba(52,211,153,0.6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M430 248 L430 258 L420 258" stroke="rgba(52,211,153,0.6)" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+            <!-- Detailed Vector Indian Banknote Shape (₹500) -->
+            <g class="banknote-visual">
+              <rect x="80" y="95" width="220" height="96" rx="4" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <!-- Note security fine micro lines -->
+              <line x1="90" y1="110" x2="290" y2="110" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="90" y1="125" x2="290" y2="125" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="90" y1="140" x2="290" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="90" y1="155" x2="290" y2="155" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="90" y1="170" x2="290" y2="170" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+              <!-- Watermark circle scanning zone -->
+              <circle cx="135" cy="143" r="22" stroke="rgba(52,211,153,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="135" cy="143" r="14" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <!-- pulsing watermark crosshair -->
+              <line x1="135" y1="131" x2="135" y2="155" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+              <line x1="123" y1="143" x2="147" y2="143" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+
+              <!-- Banknote text elements -->
+              <text x="210" y="149" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.18)" text-anchor="middle">₹ 500</text>
+              <text x="210" y="161" font-family="Inter,sans-serif" font-size="6" fill="rgba(255,255,255,0.1)" text-anchor="middle">RESERVE BANK OF INDIA</text>
+
+              <!-- Neon security green thread scanning overlay -->
+              <line x1="260" y1="95" x2="260" y2="191" stroke="#34d399" stroke-width="2" opacity="0.8">
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+              </line>
+            </g>
+
+            <!-- Holographic Laser Scanner Sweep Line -->
+            <line x1="42" y1="65" x2="438" y2="65" stroke="#34d399" stroke-width="1.5" opacity="0.7">
+              <animate attributeName="y1" values="65;289;65" dur="3.5s" repeatCount="indefinite"/>
+              <animate attributeName="y2" values="65;289;65" dur="3.5s" repeatCount="indefinite"/>
+            </line>
+            <rect x="42" y="65" width="396" height="6" fill="url(#laserGrad)" opacity="0.12">
+              <animate attributeName="y" values="65;283;65" dur="3.5s" repeatCount="indefinite"/>
+            </rect>
+            <defs>
+              <linearGradient id="laserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#34d399"/>
+                <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Floating CV Diagnostics Panels (Right Side) -->
+            <g class="diagnostics-panel">
+              <!-- Grid background panel -->
+              <rect x="310" y="95" width="118" height="96" rx="4" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              
+              <!-- Logs and scores -->
+              <text x="320" y="112" font-family="Inter,sans-serif" font-size="7" font-weight="600" fill="rgba(255,255,255,0.3)">CV SCAN DIAGNOSTICS</text>
+              <line x1="320" y1="118" x2="418" y2="118" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+              <text x="320" y="132" font-family="Inter,sans-serif" font-size="6.5" font-weight="600" fill="#34d399">■ WATERMARK: OK</text>
+              <text x="320" y="146" font-family="Inter,sans-serif" font-size="6.5" font-weight="600" fill="#34d399">■ THREAD INK: OK</text>
+              <text x="320" y="160" font-family="Inter,sans-serif" font-size="6.5" font-weight="600" fill="#34d399">■ DIMS MATCH: OK</text>
+              <text x="320" y="176" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="rgba(255,255,255,0.85)">MATCH: 99.82%</text>
+            </g>
+
+            <!-- Holographic Verdict Popup Banner (Viewport Bottom Center) -->
+            <g class="verdict-banner">
+              <rect x="120" y="212" width="240" height="34" rx="17" fill="rgba(10,10,12,0.9)" stroke="#34d399" stroke-width="1.2" filter="drop-shadow(0 0 8px rgba(52,211,153,0.25))"/>
+              
+              <!-- pulsing active dot -->
+              <circle cx="140" cy="229" r="4.5" fill="#34d399">
+                <animate attributeName="r" values="3.5;6.5;3.5" dur="1.4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.6;1;0.6" dur="1.4s" repeatCount="indefinite"/>
+              </circle>
+              
+              <text x="156" y="233" font-family="Inter,sans-serif" font-size="9.5" font-weight="800" fill="rgba(255,255,255,0.95)" letter-spacing="0.06em">VERIFIED GENUINE NOTE</text>
+              <text x="344" y="233" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="end">OPENCV CV2</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+    </div><!-- /proj-stack -->
+  </section>
+
+
+
+  <!-- ════════════════════════════════════
+       6. EDUCATION
+  ════════════════════════════════════ -->
+  <section id="education" class="s-education" aria-labelledby="eduHeading">
+    <div class="container">
+      <span class="section-eyebrow section-eyebrow--light" data-anim="fade-up">Education</span>
+      <h2 id="eduHeading" class="section-heading section-heading--light" data-anim="fade-up" data-delay="100">
+        The foundation<br><em>behind the work.</em>
+      </h2>
+      <div class="edu-list">
+
+        <div class="edu-item" data-anim="fade-up" data-delay="100">
+          <div class="edu-left">
+            <h3 class="edu-degree">Master of Technology (M.Tech)</h3>
+            <p class="edu-field">Computer Engineering</p>
+          </div>
+          <div class="edu-right">
+            <p class="edu-school">Vishwakarma Institute of Information Technology</p>
+            <div class="edu-meta-row">
+              <time class="edu-year">2018 – 2020</time>
+              <span class="edu-gpa">GPA 8.16 / 10</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-item" data-anim="fade-up" data-delay="200">
+          <div class="edu-left">
+            <h3 class="edu-degree">Bachelor of Engineering (B.E.)</h3>
+            <p class="edu-field">Information Technology</p>
+          </div>
+          <div class="edu-right">
+            <p class="edu-school">G.H. Raisoni College of Engineering, Nagpur</p>
+            <div class="edu-meta-row">
+              <time class="edu-year">2014 – 2018</time>
+              <span class="edu-gpa">GPA 8.5 / 10</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       7. RECOMMENDATIONS
+  ════════════════════════════════════ -->
+  <section id="recommendations" class="s-rec s-light" aria-labelledby="recHeading">
+    <div class="container rec-container">
+      <span class="section-eyebrow" data-anim="fade-up">Recommendations</span>
+      <h2 id="recHeading" class="section-heading rec-heading" data-anim="fade-up" data-delay="100">
+        What others say.
+      </h2>
+
+      <div class="rec-stage" role="region" aria-label="Recommendations carousel" aria-live="polite" id="recStage">
+
+        <figure class="rec-slide active" id="rec-0">
+          <blockquote class="rec-quote">
+            "He has a rare blend of strategic vision and operational expertise, someone who can architect a program from the ground up and ensure every detail is executed flawlessly. A fantastic team player and natural mentor."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Nidhi Tripathi</strong>
+            <span>Program &amp; Operations Manager · Workflow Automation Expert</span>
+          </figcaption>
+        </figure>
+
+        <figure class="rec-slide" id="rec-1">
+          <blockquote class="rec-quote">
+            "His mentorship has been invaluable. He genuinely cares about student growth, beyond grades and beyond graduation. He fosters a culture of innovation and critical thinking that stays with you. That kind of educator is rare."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Anusri Karmokar</strong>
+            <span>UI/UX Designer · 3× Hackathon Finalist</span>
+          </figcaption>
+        </figure>
+
+        <figure class="rec-slide" id="rec-2">
+          <blockquote class="rec-quote">
+            "Swapnil Wable is an inspiring leader and educator dedicated to bridging educational gaps and fostering entrepreneurship. His commitment to academic excellence and passion for innovation sets a benchmark for others to follow."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Dr. Aarti Pardeshi</strong>
+            <span>Head, B.Tech Computer Science Department</span>
+          </figcaption>
+        </figure>
+
+        <figure class="rec-slide" id="rec-3">
+          <blockquote class="rec-quote">
+            "A dynamic professional demonstrating exceptional leadership, technical expertise, and an unwavering dedication to institutional advancement. His innovation-driven approach and strategic vision make him a remarkable asset."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Dr. Kiran Rane</strong>
+            <span>Senior Leadership · ITM Skills University</span>
+          </figcaption>
+        </figure>
+
+        <figure class="rec-slide" id="rec-4">
+          <blockquote class="rec-quote">
+            "What I admire most is his humble and supportive nature. He treats everyone with respect and is always willing to guide students and colleagues alike. His problem-solving ability and collaborative mindset consistently deliver outstanding results."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Shruti Kumari</strong>
+            <span>Growth Manager · Former colleague at ITM</span>
+          </figcaption>
+        </figure>
+
+        <figure class="rec-slide" id="rec-5">
+          <blockquote class="rec-quote">
+            "Swapnil is not only a valued colleague but also a motivating presence. He is highly proactive and consistently works towards solving challenges efficiently. His composure in demanding situations is truly commendable."
+          </blockquote>
+          <figcaption class="rec-caption">
+            <strong>Poonam Pradhan</strong>
+            <span>Corporate Relations Specialist · HR &amp; Community</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- Controls -->
+      <div class="rec-controls" role="group" aria-label="Navigate recommendations">
+        <button class="rec-arrow rec-arrow--prev" id="recPrev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="rec-dots" id="recDots" role="tablist" aria-label="Recommendation slides"></div>
+        <button class="rec-arrow rec-arrow--next" id="recNext" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       8. CONTACT
+  ════════════════════════════════════ -->
+  <section id="contact" class="s-contact" aria-labelledby="contactHeading">
+    <div class="container contact-inner">
+      <span class="section-eyebrow section-eyebrow--light" data-anim="fade-up">Let's build something</span>
+      <h2 id="contactHeading" class="contact-heading" data-anim="fade-up" data-delay="100">
+        Ready to create<br>something remarkable?
+      </h2>
+      <p class="contact-sub" data-anim="fade-up" data-delay="200">
+        Whether it's a collaboration, advisory conversation, or an idea about the future of education, I'm always open to meaningful exchanges.
+      </p>
+
+      <div class="contact-ctas" data-anim="fade-up" data-delay="300">
+        <a href="mailto:swapnilwable10@gmail.com" class="btn btn--primary btn--large">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4h14v10H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 4l7 6 7-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          swapnilwable10@gmail.com
+        </a>
+      </div>
+
+      <div class="social-links" data-anim="fade-up" data-delay="400">
+        <a href="https://www.linkedin.com/in/swapnil-wable/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/swapnil_wable" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+        <a href="https://x.com/wable_swapnil" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X
+        </a>
+        <a href="https://github.com/swapnilwable25" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://swapnilwable.medium.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Medium">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          Medium
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer id="siteFooter">
+  <div class="footer-inner container">
+    <span class="footer-logo">SW</span>
+    <p class="footer-copy">
+      &copy; <span id="footerYear"></span> Swapnil Wable &nbsp;&middot;&nbsp; Navi Mumbai, India
+    </p>
+    <p class="footer-quote">"0 to 1, transforming bold ideas into tangible realities."</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#hero">Top</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/swapnil-wable/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ░░░ INLINE SCRIPTS ░░░ -->
+<script>
+(function(){
+  'use strict';
+
+  // ── Year
+  var yearEl = document.getElementById('footerYear');
+  if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ── Loader
+  var loaderBar = document.getElementById('loaderBar');
+  var loader    = document.getElementById('loader');
+  var pct = 0;
+  var loaderTimer = setInterval(function(){
+    pct += Math.random()*16 + 6;
+    if(pct >= 100){
+      pct = 100;
+      clearInterval(loaderTimer);
+      if(loaderBar) loaderBar.style.width = '100%';
+      setTimeout(function(){
+        if(loader) loader.classList.add('done');
+      }, 400);
+    }
+    if(loaderBar) loaderBar.style.width = Math.min(pct,100)+'%';
+  }, 100);
+
+  // ── Scroll progress
+  var scrollBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', function(){
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    if(scrollBar && total > 0) scrollBar.style.transform = 'scaleX('+(window.scrollY/total)+')';
+  }, {passive:true});
+
+  // ── Nav scroll state
+  var hdr = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    if(hdr) hdr.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+
+  // ── Nav active link tracking
+  var navLinks = document.querySelectorAll('.nav-link[data-section]');
+  window.addEventListener('scroll', function(){
+    var cur = '';
+    navLinks.forEach(function(l){
+      var sec = document.getElementById(l.dataset.section);
+      if(sec && sec.getBoundingClientRect().top <= 120) cur = l.dataset.section;
+    });
+    navLinks.forEach(function(l){ l.classList.toggle('active', l.dataset.section === cur); });
+  }, {passive:true});
+
+  // ── Mobile menu
+  var ham   = document.getElementById('navHamburger');
+  var mmenu = document.getElementById('mobileMenu');
+  var mclose= document.getElementById('mobileClose');
+  function openMenu(){
+    ham.setAttribute('aria-expanded','true');
+    mmenu.setAttribute('aria-hidden','false');
+    mmenu.classList.add('open');
+    document.body.classList.add('menu-open');
+  }
+  function closeMenu(){
+    ham.setAttribute('aria-expanded','false');
+    mmenu.setAttribute('aria-hidden','true');
+    mmenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  }
+  if(ham) ham.addEventListener('click', function(){
+    mmenu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  if(mclose) mclose.addEventListener('click', closeMenu);
+  if(mmenu) mmenu.querySelectorAll('.mobile-link').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+
+  // ── Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var el = id ? document.getElementById(id) : null;
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+
+  // ── Intersection Observer, reveal animations
+  var revealEls = document.querySelectorAll('[data-anim]');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var delay = e.target.dataset.delay || 0;
+          e.target.animTimeout = setTimeout(function(){ e.target.classList.add('anim-in'); }, parseInt(delay));
+        } else {
+          if (e.target.animTimeout) {
+            clearTimeout(e.target.animTimeout);
+            delete e.target.animTimeout;
+          }
+          e.target.classList.remove('anim-in');
+        }
+      });
+    }, {threshold: 0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('anim-in'); });
+  }
+
+  // ── Counter animation (triggered by reveal)
+  function countUp(el){
+    var target = parseInt(el.dataset.count, 10);
+    if(!target) return;
+    var dur = 2000, t0 = performance.now();
+    var suffix = el.nextElementSibling;
+    var suffixHTML = suffix && suffix.tagName==='SPAN' && suffix.classList.contains('stat-sup') ? suffix.outerHTML : '';
+    (function tick(now){
+      var p = Math.min(1,(now-t0)/dur);
+      var ease = 1-Math.pow(1-p, 4);
+      el.textContent = Math.round(ease*target);
+      if(p<1) requestAnimationFrame(tick);
+      else { el.textContent = target; }
+    })(t0);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !e.target.dataset.counted){
+        e.target.dataset.counted = '1';
+        countUp(e.target);
+      }
+    });
+  },{threshold:0.7});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+  // ── Recommendations carousel
+  var slides   = document.querySelectorAll('.rec-slide');
+  var dotsWrap = document.getElementById('recDots');
+  var prevBtn  = document.getElementById('recPrev');
+  var nextBtn  = document.getElementById('recNext');
+  var current  = 0;
+  var auto;
+
+  if(slides.length && dotsWrap){
+    slides.forEach(function(_,i){
+      var d = document.createElement('button');
+      d.className = 'rec-dot'+(i===0?' active':'');
+      d.setAttribute('role','tab');
+      d.setAttribute('aria-selected', i===0 ? 'true':'false');
+      d.setAttribute('aria-label','Recommendation '+(i+1)+' of '+slides.length);
+      d.addEventListener('click', function(){ goTo(i); resetAuto(); });
+      dotsWrap.appendChild(d);
+    });
+  }
+
+  function goTo(idx){
+    slides[current].classList.remove('active');
+    var dots = dotsWrap ? dotsWrap.querySelectorAll('.rec-dot') : [];
+    if(dots[current]){ dots[current].classList.remove('active'); dots[current].setAttribute('aria-selected','false'); }
+    current = ((idx % slides.length)+slides.length) % slides.length;
+    slides[current].classList.add('active');
+    if(dots[current]){ dots[current].classList.add('active'); dots[current].setAttribute('aria-selected','true'); }
+  }
+  function resetAuto(){ clearInterval(auto); auto = setInterval(function(){ goTo(current+1); }, 7000); }
+  if(prevBtn) prevBtn.addEventListener('click', function(){ goTo(current-1); resetAuto(); });
+  if(nextBtn) nextBtn.addEventListener('click', function(){ goTo(current+1); resetAuto(); });
+  resetAuto();
+
+  // ── Custom cursor
+  var dot  = document.getElementById('cursorDot');
+  var ring = document.getElementById('cursorRing');
+  if(dot && ring && window.matchMedia('(hover:hover)').matches){
+    var mx=-100,my=-100,rx=-100,ry=-100;
+    document.addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate('+(mx-3)+'px,'+(my-3)+'px)';
+    },{passive:true});
+    (function lerpRing(){
+      rx+=(mx-rx)*0.10; ry+=(my-ry)*0.10;
+      ring.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';
+      requestAnimationFrame(lerpRing);
+    })();
+    document.querySelectorAll('a,button,[role="button"]').forEach(function(el){
+      el.addEventListener('mouseenter',function(){ ring.classList.add('big'); dot.classList.add('hidden'); });
+      el.addEventListener('mouseleave',function(){ ring.classList.remove('big'); dot.classList.remove('hidden'); });
+    });
+    document.addEventListener('mouseleave',function(){ dot.style.opacity='0'; ring.style.opacity='0'; });
+    document.addEventListener('mouseenter',function(){ dot.style.opacity='1'; ring.style.opacity='1'; });
+  }
+})();
+
+// ── Anti-copy & Anti-inspect protection layer
+// 1. Disable right-click context menu
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// 2. Disable DevTools keyboard shortcuts, View Source, and Save Page
+document.addEventListener('keydown', function(e) {
+  // F12 (123)
+  if (e.keyCode === 123) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+Shift+I / Cmd+Option+I (Inspect)
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.keyCode === 73)) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+Shift+J / Cmd+Option+J (Console)
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'j' || e.key === 'J' || e.keyCode === 74)) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+Shift+C / Cmd+Option+C (Inspect Element selector)
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'c' || e.key === 'C' || e.keyCode === 67)) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+U / Cmd+Option+U (View Source)
+  if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+S / Cmd+S (Save page)
+  if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+C / Cmd+C (Copy keyboard shortcut)
+  if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C' || e.keyCode === 67)) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// 3. Disable copy event
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
