@@ -5,7 +5,7 @@
 
 import { setScrollT } from './scene.js';
 
-const sectionIds = ['hero', 'about', 'experience', 'projects', 'education', 'recommendations', 'contact'];
+const sectionIds = ['hero', 'about', 'experience', 'projects', 'linkedin', 'education', 'recommendations', 'contact'];
 
 export function initUI() {
   initRevealObserver();
