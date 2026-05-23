@@ -1268,8 +1268,115 @@
             PINNED POST
           </div>
           
-          <div class="linkedin-pinned-iframe-card">
-            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463660046867148800?collapsed=1" height="627" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" class="li-iframe"></iframe>
+          <div class="linkedin-pinned-hybrid-card" id="pinnedHybridCard">
+            <!-- Pinned Content Visual Card (Visible by default) -->
+            <div class="pinned-card-preview" id="pinnedCardPreview">
+              <div class="pinned-header-row">
+                <div class="pinned-profile-info">
+                  <div class="pinned-avatar">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="18" cy="18" r="18" fill="#131317" stroke="rgba(0,113,227,0.4)" stroke-width="1"/>
+                      <path d="M12 28 C12 24 14 21 18 21 C22 21 24 24 24 28" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+                      <circle cx="18" cy="14" r="5" fill="#1d1d24" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                      <rect x="15" y="12.5" width="2.5" height="2" rx="0.5" stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+                      <rect x="18.5" y="12.5" width="2.5" height="2" rx="0.5" stroke="#00b4d8" stroke-width="0.5" fill="none"/>
+                    </svg>
+                  </div>
+                  <div class="pinned-profile-meta">
+                    <h5>Swapnil Wable <span class="li-verified">✓</span></h5>
+                    <p>GM - Program Management | ITM Group</p>
+                  </div>
+                </div>
+                <span class="badge-featured">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                  Featured
+                </span>
+              </div>
+
+              <!-- Main Post Text -->
+              <div class="pinned-post-body">
+                <h4 class="pinned-post-title">
+                  Proudly Launched 🚀<br>
+                  <span>ITM Business School Milestone.</span>
+                </h4>
+                <p class="pinned-post-desc">
+                  An incredible milestone in EdTech and advanced management education. Shaping future business leaders with industry-aligned curricula, innovation, and real-world outcomes.
+                </p>
+                <div class="pinned-hashtags">
+                  <span>#BusinessEducation</span>
+                  <span>#ITMGroup</span>
+                  <span>#Leadership</span>
+                  <span>#Management</span>
+                </div>
+              </div>
+
+              <!-- Premium Vector Graphic (Launch Celebration Visual) -->
+              <div class="pinned-post-visual">
+                <svg viewBox="0 0 260 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="260" height="140" rx="8" fill="#08080a"/>
+                  <circle cx="130" cy="70" r="100" fill="url(#launchGlow)"/>
+                  <defs>
+                    <radialGradient id="launchGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="rgba(0,113,227,0.25)"/>
+                      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+                    </radialGradient>
+                    <linearGradient id="beamGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#0071e3" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  
+                  <circle cx="50" cy="40" r="2" fill="#00b4d8" opacity="0.5"/>
+                  <circle cx="210" cy="100" r="3" fill="#8b5cf6" opacity="0.6"/>
+                  <line x1="50" y1="40" x2="130" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                  <line x1="210" y1="100" x2="130" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                  
+                  <rect x="122" y="35" width="16" height="70" rx="3" fill="#13131a" stroke="rgba(0,113,227,0.3)" stroke-width="1"/>
+                  <polygon points="120,35 130,15 140,35" fill="#0071e3"/>
+                  <circle cx="130" cy="50" r="4" fill="#00b4d8"/>
+                  <text x="130" y="85" font-family="Inter,sans-serif" font-weight="800" font-size="8" fill="white" text-anchor="middle">ITM</text>
+                  
+                  <rect x="70" y="60" width="12" height="45" rx="2" fill="#13131a" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                  <rect x="178" y="60" width="12" height="45" rx="2" fill="#13131a" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                  
+                  <polygon points="0,140 130,70 140,70 260,140" fill="url(#beamGrad)"/>
+                </svg>
+              </div>
+
+              <!-- Engagement Stats Divider -->
+              <hr class="pinned-divider" style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin: 0 0 16px 0;">
+
+              <!-- Footer with dynamic controls -->
+              <div class="pinned-footer-row">
+                <a href="https://www.linkedin.com/posts/swapnil-wable_itm-business-school-proudly-launched-the-ugcPost-7463660046867148800-PScm/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABuDX84BhxB-1AVq4SgvwQr6kZthcKJFDNc" target="_blank" rel="noopener" class="pinned-cta-primary">
+                  <span>Open on LinkedIn</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <button type="button" class="pinned-cta-secondary" onclick="loadLinkedInIframe()">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Interactive Feed</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Pinned Content Live Iframe Container (Hidden by default) -->
+            <div class="pinned-card-iframe" id="pinnedCardIframe" style="display: none;">
+              <div class="iframe-header">
+                <span>Interactive Live Post</span>
+                <button type="button" class="iframe-close-btn" onclick="unloadLinkedInIframe()">
+                  ✕ Close
+                </button>
+              </div>
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463660046867148800?collapsed=1" height="565" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" class="li-iframe"></iframe>
+            </div>
           </div>
         </div>
         
