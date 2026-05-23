@@ -1933,165 +1933,201 @@ section { position: relative; }
   box-shadow: 0 40px 80px rgba(0, 113, 227, 0.15);
 }
 
-.linkedin-pinned-iframe-container {
+/* ── Premium LinkedIn Static Post Card ── */
+.li-post-card {
   display: flex;
   flex-direction: column;
-  background: rgba(20, 20, 25, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--r-lg);
-  padding: 12px;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s, box-shadow 0.6s;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  gap: 0;
+  background: rgba(14, 14, 20, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
   overflow: hidden;
-  height: 651px; /* perfectly matches right column feed card height */
-  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0 0 0 1px rgba(0, 113, 227, 0.08), 0 30px 60px rgba(0, 0, 0, 0.4);
   position: relative;
-  box-sizing: border-box;
+  cursor: pointer;
 }
-.linkedin-pinned-iframe-container:hover {
-  transform: translateY(-6px) scale(1.008);
-  border-color: rgba(0, 113, 227, 0.25);
-  box-shadow: 0 40px 80px rgba(0, 113, 227, 0.15);
-}
-.linkedin-pinned-iframe-container::before {
+.li-post-card::before {
   content: '';
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: radial-gradient(circle, rgba(0, 113, 227, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
-  z-index: -1;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% -10%, rgba(0, 113, 227, 0.12) 0%, transparent 60%);
   pointer-events: none;
-  border-radius: 40px;
-  transition: opacity 0.6s;
-  opacity: 0.5;
+  z-index: 0;
+  transition: opacity 0.5s;
+  opacity: 0.6;
 }
-.linkedin-pinned-iframe-container:hover::before {
-  opacity: 1;
+.li-post-card:hover {
+  transform: translateY(-6px) scale(1.008);
+  border-color: rgba(0, 113, 227, 0.22);
+  box-shadow: 0 0 0 1px rgba(0, 113, 227, 0.18), 0 50px 80px rgba(0, 113, 227, 0.12), 0 20px 40px rgba(0, 0, 0, 0.5);
 }
+.li-post-card:hover::before { opacity: 1; }
+.li-post-card > * { position: relative; z-index: 1; }
 
-.iframe-top-bar {
+/* Top bar */
+.li-post-card-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 6px 12px 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 12px;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.pinned-badge {
+.li-post-card-pin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 10px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
 }
-.iframe-direct-link {
+.li-post-card-cta {
   font-size: 11px;
   font-weight: 700;
   color: #00b4d8;
-  text-decoration: none;
+  letter-spacing: 0.02em;
   transition: color 0.3s, transform 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  display: inline-block;
 }
-.iframe-direct-link:hover {
+.li-post-card:hover .li-post-card-cta {
   color: #0071e3;
   transform: translateX(2px);
 }
 
-.iframe-scroll-wrapper {
-  flex-grow: 1; /* Adapts and takes remaining height */
-  width: 100%;
-  overflow-y: auto;
-  border-radius: 12px;
-  background: #141419;
-  position: relative;
-  /* Premium Scrollbar */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.02);
+/* Author row */
+.li-post-card-author {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px 12px;
 }
-.iframe-scroll-wrapper::-webkit-scrollbar {
-  width: 4px;
+.li-post-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
 }
-.iframe-scroll-wrapper::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 2px;
-}
-.iframe-scroll-wrapper::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.iframe-loader-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.li-post-card-avatar svg { width: 44px; height: 44px; }
+.li-post-card-author-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
-  box-sizing: border-box;
-  text-align: center;
-  z-index: 1;
+  gap: 2px;
 }
-.loader-bg-icon {
-  color: #0077b5;
-  margin-bottom: 16px;
-  animation: pulseGlow 2s infinite alternate;
-}
-@keyframes pulseGlow {
-  0% { transform: scale(1); opacity: 0.6; }
-  100% { transform: scale(1.1); opacity: 1; }
-}
-.iframe-loader-bg h3 {
-  font-size: 16px;
-  font-weight: 800;
-  color: white;
-  margin: 0 0 10px 0;
-}
-.iframe-loader-bg p {
-  font-size: 12px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.5);
-  max-width: 240px;
-  margin: 0 0 20px 0;
-}
-.loader-bg-btn {
+.li-post-card-name {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #0071e3 0%, #005a87 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 11px;
+  gap: 5px;
+  font-size: 14px;
   font-weight: 700;
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: -0.01em;
 }
-.loader-bg-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 113, 227, 0.25);
+.li-verified-badge { flex-shrink: 0; }
+.li-post-card-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+.li-post-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.28);
+  margin-top: 1px;
 }
 
-.li-iframe {
-  width: 100%;
-  height: 1908px; /* Native tall rendering of the ugcPost */
-  border: none;
-  display: block;
-  border-radius: 12px;
-  background: #141419;
-  position: relative;
-  z-index: 2; /* Sits on top of the fallback info card */
+/* Post body */
+.li-post-card-body { padding: 4px 18px 14px; }
+.li-post-card-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 10px 0;
 }
+.li-post-card-text strong { color: rgba(255, 255, 255, 0.95); }
+.li-post-card-text--secondary { color: rgba(255, 255, 255, 0.5); font-size: 12.5px; }
+.li-post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.li-post-card-tags span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #0077b5;
+  background: rgba(0, 119, 181, 0.1);
+  border: 1px solid rgba(0, 119, 181, 0.18);
+  border-radius: 6px;
+  padding: 3px 8px;
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s;
+}
+.li-post-card:hover .li-post-card-tags span {
+  background: rgba(0, 119, 181, 0.18);
+  color: #00b4d8;
+}
+
+/* Visual banner */
+.li-post-card-banner {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+.li-post-card-banner svg { width: 100%; height: auto; display: block; }
+
+/* Footer */
+.li-post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.li-post-card-reactions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.li-post-card-reaction-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+}
+.li-post-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.li-post-card-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.32);
+  transition: color 0.3s;
+}
+.li-post-card:hover .li-post-card-stats span { color: rgba(255, 255, 255, 0.55); }
+.li-post-card-stats svg { opacity: 0.6; }
+
+/* react bubbles for the new card */
+.react-bubble.bubble-celebrate { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+
 
 .pinned-body {
   display: grid;
