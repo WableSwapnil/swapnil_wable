@@ -1,8 +1,8 @@
 const https = require('https');
 
-// Highly structured, server-side data pipeline containing Swapnil Wable's actual public posts
-// This acts as a robust, high-availability local database fallback to guarantee
-// 100% uptime and instantaneous rendering.
+// A structured, server-side data pipeline containing Swapnil Wable's real public posts
+// This acts as a robust, high-availability local database/scraping fallback to guarantee
+// 100% uptime and blazingly fast delivery on Vercel.
 const CURATED_LINKEDIN_FEED = [
   {
     id: "7128608405018693632",
@@ -62,18 +62,17 @@ module.exports = async (req, res) => {
     return;
   }
 
-  // 1. RSS-to-JSON Pipeline Integration ( Juicer, RSS.app, etc. )
-  // If the user configures the LINKEDIN_FEED_URL in Vercel Dashboard, we fetch and parse it in real-time
-  const feedUrl = process.env.LINKEDIN_FEED_URL;
+  // Check if a custom scraper API key or external service is set in Vercel env
+  const externalScraperUrl = process.env.LINKEDIN_SCRAPER_API_URL;
   const username = "swapnil-wable";
 
-  if (feedUrl) {
+  if (externalScraperUrl) {
     try {
-      // Use rss2json free parser service to securely parse public profile feeds
-      const parserUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+      // Fetch dynamically from server-side scraper API
+      const url = `${externalScraperUrl}?username=${username}`;
       
       const fetchPromise = new Promise((resolve, reject) => {
-        https.get(parserUrl, (apiRes) => {
+        https.get(url, (apiRes) => {
           let data = '';
           apiRes.on('data', (chunk) => data += chunk);
           apiRes.on('end', () => {
@@ -88,51 +87,23 @@ module.exports = async (req, res) => {
       });
 
       const result = await fetchPromise;
-      if (result.statusCode === 200 && result.body && result.body.items && result.body.items.length > 0) {
-        // Map the RSS parsed items to our premium feed card database format
-        const posts = result.body.items.slice(0, 5).map((item, index) => {
-          // Parse description content and clean HTML tags
-          let text = item.description || item.content || 'View full post on LinkedIn';
-          text = text.replace(/<[^>]*>/g, ''); // strip HTML tags
-          text = text.trim();
-          
-          // Format date cleanly (e.g. '2h ago' or short date)
-          const pubDate = new Date(item.pubDate);
-          const timeDiff = Math.abs(new Date() - pubDate);
-          const hoursDiff = Math.floor(timeDiff / (1000 * 60 * 60));
-          
-          let dateString = '';
-          if (hoursDiff < 24) {
-            dateString = `${hoursDiff || 1}h ago`;
-          } else {
-            dateString = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-          }
-
-          return {
-            id: `rss-${index}`,
-            text: text.length > 180 ? text.substring(0, 180) + '...' : text,
-            date: dateString,
-            url: item.link || `https://www.linkedin.com/in/${username}`,
-            reactions: 80 + Math.floor(Math.random() * 60), // Generate high-end mockup stats
-            comments: 6 + Math.floor(Math.random() * 15)
-          };
-        });
-
+      if (result.statusCode === 200 && result.body && result.body.posts) {
+        // Return scraped posts through JSON Response Pipeline
         res.status(200).json({
           success: true,
-          source: "live-rss-scraper",
+          source: "server-side-scraper",
           username: username,
-          posts: posts
+          posts: result.body.posts
         });
         return;
       }
     } catch (e) {
-      console.warn('[linkedin-rss-scraper] Dynamic RSS fetch failed, utilizing high-availability curated pipeline:', e.message);
+      console.warn('[linkedin-scraper] Server-side fetch failed, utilizing high-availability curated pipeline:', e.message);
     }
   }
 
-  // 2. High-availability Curated Pipeline (Swapnil Wable's actual verified posts)
-  // Ensures 100% serverless uptime and instantaneous loading
+  // High-availability Curated Pipeline (Swapnil Wable's actual verified posts)
+  // Ensures 100% serverless uptime and instantaneous rendering
   res.status(200).json({
     success: true,
     source: "curated-pipeline",
