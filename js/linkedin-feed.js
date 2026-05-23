@@ -114,22 +114,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadFeed();
 });
-
-// Pinned hybrid card iframe handlers
-window.loadLinkedInIframe = function() {
-  const preview = document.getElementById('pinnedCardPreview');
-  const iframeContainer = document.getElementById('pinnedCardIframe');
-  if (preview && iframeContainer) {
-    preview.style.display = 'none';
-    iframeContainer.style.display = 'flex';
-  }
-};
-
-window.unloadLinkedInIframe = function() {
-  const preview = document.getElementById('pinnedCardPreview');
-  const iframeContainer = document.getElementById('pinnedCardIframe');
-  if (preview && iframeContainer) {
-    iframeContainer.style.display = 'none';
-    preview.style.display = 'flex';
-  }
-};
