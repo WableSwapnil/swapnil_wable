@@ -1350,15 +1350,15 @@ section { position: relative; }
   display: block;
   width: 100%;
   max-width: 560px;
-  min-height: 900px;
+  height: 900px; /* changed from min-height */
   margin: 0 auto;
   border: 0;
   border-radius: 12px;
-  background: #fff;
+  background: transparent;
 }
 
 .linkedin-embed-shell--tall iframe {
-  min-height: 1908px;
+  height: 1908px;
 }
 
 .linkedin-preview {
