@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swapnil-wable.vercel.app/sitemap.xml
+Sitemap: https://swapnil.swglobalventures.in/sitemap.xml
